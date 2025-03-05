@@ -33,7 +33,8 @@ const agregarProducto = () => {
     socket.emit("nuevoProducto", product);
     title.value = "";   
     description.value = "";   
-    code.value = "";   
+    code.value = "";
+    price.value = "";  
     category.value = "";   
     image.value = "";
     document.getElementById("producto_estado1").innerHTML = `<div class="alert alert-success" role="alert">El producto se agregó correctamente!</div>`;
@@ -46,9 +47,9 @@ const limpiarSelectEliminarProducto = () => {
 
 const agregarItemEliminarProducto = (item) => {
     const productId = document.getElementById("product_id");
-    let option = document.createElement("option");
-    option.value = item.id;
-    option.innerHTML = "Producto #" + item.id;
+    let option = document.createElement("option");    
+    option.value = item._id;
+    option.innerHTML = "Producto: " + item.title;
     productId.appendChild(option);
 }
 
