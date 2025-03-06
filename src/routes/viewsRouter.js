@@ -1,11 +1,15 @@
 import { Router } from "express";
 import ProductManager from "../classes/ProductManager.js";
+import { paginateSubDocs } from "mongoose-paginate-v2";
 
 const viewsRouter = Router();
 const PM = new ProductManager();
 
 viewsRouter.get("/", async (req, res) => {
-    let products = await PM.getProducts();        
+    const {limit, page, query, sort} = req.query;
+
+
+    let products = await PM.getProducts(limit, page, query, sort);        
 
     res.render("home", {products:products});
 })
