@@ -38,7 +38,7 @@ socketServer.on("connection", async socket => {
         await PM.addProduct(product);
         console.log("Se agregó un nuevo Producto!");
         const products = await PM.getProducts();
-        console.log(products);
+        console.log(products)
         socket.emit("realtimeproducts", products);
     })
 
