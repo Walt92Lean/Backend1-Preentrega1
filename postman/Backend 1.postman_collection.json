@@ -185,7 +185,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/carts/1",
+									"raw": "http://localhost:8080/api/carts/67ca10514b3cc17adfaa349a",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -194,7 +194,7 @@
 									"path": [
 										"api",
 										"carts",
-										"1"
+										"67ca10514b3cc17adfaa349a"
 									]
 								}
 							},
@@ -206,7 +206,7 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/carts/67ca10514b3cc17adfaa349a/product/67c86741c38533e83cd1b1ef",
+									"raw": "http://localhost:8080/api/carts/67ca10514b3cc17adfaa349a/product/67caf881055419a26aa09626",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -217,7 +217,7 @@
 										"carts",
 										"67ca10514b3cc17adfaa349a",
 										"product",
-										"67c86741c38533e83cd1b1ef"
+										"67caf881055419a26aa09626"
 									]
 								}
 							},
@@ -252,7 +252,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/carts/67ca10514b3cc17adfaa349a/",
+									"raw": "http://localhost:8080/api/carts/67ca10514b3cc17adfaa349a",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -261,8 +261,7 @@
 									"path": [
 										"api",
 										"carts",
-										"67ca10514b3cc17adfaa349a",
-										""
+										"67ca10514b3cc17adfaa349a"
 									]
 								}
 							},
@@ -275,7 +274,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "[\r\n    {\r\n        \"product\":\"67c86741c38533e83cd1b1ef\",\r\n        \"quantity\":1\r\n    },\r\n    {\r\n        \"product\":\"67c86bcb596c973f853d537c\",\r\n        \"quantity\":2\r\n    }\r\n]",
+									"raw": "[\r\n    {\r\n        \"product\":\"67caf881055419a26aa09626\",\r\n        \"quantity\":5\r\n    },\r\n    {\r\n        \"product\":\"67caf80c055419a26aa0961e\",\r\n        \"quantity\":2\r\n    }\r\n]",
 									"options": {
 										"raw": {
 											"language": "json"

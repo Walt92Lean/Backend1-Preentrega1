@@ -9,10 +9,10 @@ cartsRouter.get("/", async (req, res) => {
     res.send(carts);
 })
 cartsRouter.get("/:cid", async (req, res) => {
-    const cid = req.params.cid;
-    const cart = await CM.getCartById(cid);
+    let cid = req.params.cid;
+    let cart = await CM.getCartById(cid);
     
-    res.send(cart);
+    res.send(cart)
 })
 cartsRouter.post("/", async (req, res) => {
     await CM.createCart();

@@ -6,7 +6,7 @@ class CartManager {
     }
 
     async getCartById(id) {        
-        return await cartModel.find({_id:id}).lean();
+        return await cartModel.findOne({_id:id}).lean().populate("products.product");
     }
 
     async createCart() {
