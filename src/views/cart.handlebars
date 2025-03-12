@@ -1,18 +1,16 @@
-<div class="container">
-    <div class="row">
-        {{#each products.payload}}
-            <div class="col-md-3">
-                <div class="card text-center border-0 fw-light">
-                    <a href="/products/{{this.id}}" class="text-decoration-none text-black">
-                        <img src="{{this.thumbnails}}" class="img-fluid" alt="{{this.title}}">
-                        <div class="card-body">
-                            <p class="card-text">{{this.title}}</p>
-                            <p class="card-text">${{this.price}}</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        {{/each}}
+<h1>Carrito de Compras</h1>
+
+    {{#if cart.products.length}}
+        <ul>
+            {{#each cart.products}}
+                <li>
+                    <strong>{{product.title}}</strong> - ${{product.price}}  
+                    (Cantidad: {{quantity}})
+                </li>
+            {{/each}}
         </ul>
-    </div>
-</div>
+    {{else}}
+        <p>El carrito está vacío.</p>
+    {{/if}}
+
+    <a href="/">Volver a la tienda</a>

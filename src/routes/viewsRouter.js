@@ -27,11 +27,21 @@ viewsRouter.get("/products/:pid", async (req, res) => {
     res.render("product", {product:product});
 })
 
-viewsRouter.get("/carts/:cid", async (req, res) => {
-    const cart = await CM.getCartById(req.params.cid);
-   
-    res.render("cart", { title: "Cart Details", cart });
-});
+/*viewsRouter.get("/cart", async (req, res) => {
+    try {
+        const cart = await cart.find();
+        res.render("cart", { cart });
+    } catch (error) {
+        res.status(500).send("Error al obtener el carrito");
+    }
+});*/
+
+viewsRouter.get("/:cid", async (req, res) => {
+    let cid = req.params.cid;
+    let cart = await CM.getCartById(cid);
+    
+    res.render("cart", {cart});
+})
 
 viewsRouter.get("/realtimeproducts", (req, res) => {
     res.render("realtimeproducts");
